@@ -21,6 +21,12 @@ it('Call the /twitter endpoint', async done => {
     expect(res.text).toBe('Hello, Twitter Indonesia!')
     done()
 })
+it('Call the /discord endpoint', async done => {
+    const res = await request.get('/discord')
+    expect(res.status).toBe(200)
+    expect(res.text).toBe('Hello, Discord Indonesia!')
+    done()
+})
 it('Call the / endpoint', async done => {
     const res = await request.get('/')
     expect(res.status).toBe(200)
